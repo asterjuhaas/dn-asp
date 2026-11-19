@@ -8,5 +8,5 @@ export default defineHandler(() => ({
   arena: ARENA,
   layout: LAYOUT,
   maxPlayers: RULES.maxPlayers,
-  runtime: "scaffold",
+  runtime: "node",
 }));

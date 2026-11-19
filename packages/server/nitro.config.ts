@@ -14,6 +14,9 @@ function kvMount(mount: Record<string, unknown>): NonNullable<NitroConfig["kv"]>
 }
 
 export default defineConfig({
+  // Nitro 3 defaults `serverDir` to `false` (Nitro 2 used `server/`). Set it
+  // explicitly so route scanning looks at `packages/server/server`.
+  serverDir: "server",
   features: {
     websocket: true,
   },

@@ -124,6 +124,12 @@ Captured so agents do not have to re-fetch the docs.
 ### WebSockets
 
 - Enable with `features: { websocket: true }` in `nitro.config.ts`.
+- Nitro 3 defaults `serverDir` to `false`. Set `serverDir: "server"` when
+  routes live in `server/routes`, otherwise the build emits no handlers and
+  every request 404s. Nitro 2 used `server/` implicitly; Nitro 3 does not.
+- The Nitro Vite plugin takes `rootDir` from Vite's `root`. Vite+ runs from the
+  workspace root even with `-C packages/server`, so set `root: import.meta.dirname`
+  in `packages/server/vite.config.ts`; without it Nitro scans the repo root.
 - A route file named `_ws.ts` becomes the WebSocket endpoint.
 - Handler shape: `defineWebSocketHandler({ open, message, close, error })`
   imported from `nitro`.
