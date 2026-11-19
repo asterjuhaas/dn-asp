@@ -1,0 +1,22 @@
+{
+  "name": "@snake/client",
+  "version": "0.1.0",
+  "private": true,
+  "description": "ASCII terminal client for snake-multi.",
+  "bin": {
+    "snake": "./dist/cli.mjs"
+  },
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "scripts": {
+    "dev": "vp pack --watch",
+    "build": "vp pack",
+    "check": "vp check",
+    "start": "node dist/cli.mjs"
+  },
+  "dependencies": {
+    "@snake/shared": "workspace:*"
+  }
+}

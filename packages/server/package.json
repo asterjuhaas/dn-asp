@@ -1,0 +1,21 @@
+{
+  "name": "@snake/server",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Nitro server for snake-multi. Runtime-specific adapters live here; game rules stay in @snake/shared.",
+  "type": "module",
+  "scripts": {
+    "dev": "vp dev",
+    "build": "vp build",
+    "preview": "node .output/server/index.mjs",
+    "check": "vp check"
+  },
+  "dependencies": {
+    "@snake/shared": "workspace:*",
+    "nitro": "3.0.261103-rc",
+    "unstorage": "2.0.0-beta.0"
+  },
+  "devDependencies": {
+    "jiti": "^2.7.0"
+  }
+}

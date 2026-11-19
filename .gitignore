@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build output
+dist/
+.output/
+.nitro/
+.vite/
+*.tsbuildinfo
+
+# Local runtime data
+.data/
+.wrangler/
+.dev.vars
+.dev.vars.*
+keys.log
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Editor and OS noise
+.DS_Store
+.idea/
+.vscode/
+*.swp

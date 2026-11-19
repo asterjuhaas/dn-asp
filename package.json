@@ -1,0 +1,35 @@
+{
+  "name": "snake-multi",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Multiplayer terminal Snake with weaponized apples, ASCII-only presentation, and server-authoritative play.",
+  "type": "module",
+  "scripts": {
+    "check": "vp check",
+    "check:fix": "vp check --fix",
+    "test": "vp test",
+    "dev:server": "vp -C packages/server dev",
+    "dev:client": "vp -C packages/client dev",
+    "build": "vp run -r build",
+    "build:shared": "vp -C packages/shared pack",
+    "build:client": "vp -C packages/client pack",
+    "build:server": "vp -C packages/server build"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.1",
+    "typescript": "^7.0.2",
+    "unstorage": "2.0.0-beta.0",
+    "vite": "npm:@voidzero-dev/vite-plus-core@8.3.8000",
+    "vite-plus": "^1.7.0",
+    "vitest": "5.1.0"
+  },
+  "engines": {
+    "node": ">=22.18.0"
+  },
+  "packageManager": "pnpm@10.18.0",
+  "pnpm": {
+    "overrides": {
+      "vite": "npm:@voidzero-dev/vite-plus-core@8.3.8000"
+    }
+  }
+}
